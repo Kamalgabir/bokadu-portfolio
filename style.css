@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    color: #fff;
+    background: linear-gradient(to bottom right , #000 , #111);
+}
+
+header {
+    position: relative;
+    width: 100%;
+    background: #ffffff00;
+    backdrop-filter: blur(5px);
+}
+
+header nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+header nav .logo img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+header nav ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container .search {
+    position: absolute;
+    width: fit-content;
+    margin: auto;
+    margin-top: 15%;
+    left: 30%;
+    text-align: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search h1 {
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-bottom: 4%;
+}
+
+.search input {
+    width: 500px;
+    height: 70px;
+    border: 1px solid #ec4209;
+    outline: none;
+    border-radius: 50px;
+    padding-left: 50px;
+    font-size: 30px;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: rgb(231, 231, 231);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #2569 , 0 0 50px #0670d9a4 , 0 0 100px #4e21d6;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(150s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #f900c3ef;
+    box-shadow: 0 0 0 10px #38376fef , 0 0 50px #f900c3ef , 0 0 100px #f900c3ef;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh)scale(0);
+    }
+    100% {
+        transform: translateY(-10vh)scale(1);
+    }
+}
